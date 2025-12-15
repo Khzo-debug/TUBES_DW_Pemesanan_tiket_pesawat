@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun - Travel.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <h1>Travel<span>.com</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-search"></i> Cari Tiket</a></li>
+                    <li><a href="favorite.html"><i class="fas fa-heart"></i> Favorit</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> Riwayat</a></li>
+                    <li><a href="account.html" class="active"><i class="fas fa-user"></i> Akun</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Akun Saya</h2>
+                <p>Kelola profil dan pengaturan akun Anda</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="account-container">
+                <div class="account-header">
+                    <div class="account-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="account-info">
+                        <h3 id="userName">Guest User</h3>
+                        <p id="userEmail">guest@example.com</p>
+                        <p><i class="fas fa-calendar-alt"></i> Bergabung: Januari 2024</p>
+                    </div>
+                </div>
+                
+                <div class="account-menu">
+                    <a href="#" class="account-menu-item" id="editProfile">
+                        <i class="fas fa-edit"></i>
+                        <div>
+                            <h4>Edit Profil</h4>
+                            <p>Ubah data pribadi Anda</p>
+                        </div>
+                    </a>
+                    
+                    <a href="history.html" class="account-menu-item">
+                        <i class="fas fa-ticket-alt"></i>
+                        <div>
+                            <h4>Tiket Saya</h4>
+                            <p>Lihat semua pemesanan</p>
+                        </div>
+                    </a>
+                    
+                    <a href="favorite.html" class="account-menu-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Favorit</h4>
+                            <p>Penerbangan tersimpan</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="account-menu-item" id="settings">
+                        <i class="fas fa-cog"></i>
+                        <div>
+                            <h4>Pengaturan</h4>
+                            <p>Ubah preferensi akun</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="account-details">
+                    <h4><i class="fas fa-info-circle"></i> Informasi Akun</h4>
+                    
+                    <div class="detail-row">
+                        <div class="detail-item">
+                            <label>Nama Lengkap</label>
+                            <p id="detailName">Guest User</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Email</label>
+                            <p id="detailEmail">guest@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-item">
+                            <label>Nomor Telepon</label>
+                            <p id="detailPhone">-</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Alamat</label>
+                            <p id="detailAddress">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-item">
+                            <label>Total Pemesanan</label>
+                            <p id="detailOrders">0</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Status Akun</label>
+                            <p id="detailStatus">Aktif</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--spacing-xl); text-align: center;">
+                        <button class="btn btn-secondary" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i> Keluar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-plane"></i> Travel.com</h4>
+                    <p>Platform pencarian tiket pesawat terpercaya</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> support@travel.com</p>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <p><i class="fas fa-headset"></i> 24/7 Customer Support</p>
+                    <p><i class="fas fa-shield-alt"></i> Pembayaran Aman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

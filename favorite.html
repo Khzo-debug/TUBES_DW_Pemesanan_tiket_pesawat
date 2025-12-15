@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorit - Travel.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <h1>Travel<span>.com</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-search"></i> Cari Tiket</a></li>
+                    <li><a href="favorite.html" class="active"><i class="fas fa-heart"></i> Favorit</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> Riwayat</a></li>
+                    <li><a href="account.html"><i class="fas fa-user"></i> Akun</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Penerbangan Favorit Anda</h2>
+                <p>Simpan dan akses dengan mudah penerbangan yang Anda sukai</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h3><i class="fas fa-heart"></i> Daftar Favorit</h3>
+                <div class="sort-options">
+                    <label for="sortFavorites">Urutkan:</label>
+                    <select id="sortFavorites">
+                        <option value="recent">Terbaru</option>
+                        <option value="price">Harga Terendah</option>
+                        <option value="airline">Maskapai</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="flights-container" id="favoritesContainer">
+                <div class="no-results" id="noFavorites">
+                    <i class="fas fa-heart"></i>
+                    <h4>Belum ada favorit</h4>
+                    <p>Tambahkan penerbangan ke favorit dengan mengklik ikon hati</p>
+                    <a href="index.html" class="btn btn-primary" style="margin-top: 20px;">
+                        <i class="fas fa-search"></i> Cari Penerbangan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-plane"></i> Travel.com</h4>
+                    <p>Platform pencarian tiket pesawat terpercaya</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> support@travel.com</p>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <p><i class="fas fa-headset"></i> 24/7 Customer Support</p>
+                    <p><i class="fas fa-shield-alt"></i> Pembayaran Aman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -308,6 +308,15 @@ nav a:hover, nav a.active {
     padding: var(--spacing-md);
 }
 
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235f6368' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-md) center;
+    background-size: 16px;
+    padding-right: calc(var(--spacing-md) * 2 + 16px);
+}
+
 .form-actions {
     display: flex;
     flex-direction: column;
@@ -333,15 +342,24 @@ nav a:hover, nav a.active {
     white-space: nowrap;
 }
 
+.btn i {
+    font-size: var(--fs-md);
+}
+
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: var(--white);
+    border: 2px solid transparent;
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary {
@@ -353,6 +371,7 @@ nav a:hover, nav a.active {
 .btn-secondary:hover {
     background-color: var(--primary-color);
     color: var(--white);
+    border-color: var(--primary-color);
 }
 
 /* RESULTS SECTION */
@@ -389,6 +408,8 @@ nav a:hover, nav a.active {
     background-color: var(--white);
     font-weight: 500;
     min-width: 200px;
+    font-size: var(--fs-base);
+    cursor: pointer;
 }
 
 .loading {
@@ -482,6 +503,10 @@ nav a:hover, nav a.active {
     text-align: center;
 }
 
+.departure, .arrival {
+    margin-bottom: var(--spacing-sm);
+}
+
 .time {
     font-size: var(--fs-xl);
     font-weight: 700;
@@ -499,6 +524,7 @@ nav a:hover, nav a.active {
 .airport-name {
     color: var(--gray-dark);
     font-size: var(--fs-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .duration {
@@ -530,6 +556,7 @@ nav a:hover, nav a.active {
     right: 0;
     top: -10px;
     color: var(--primary-color);
+    font-size: var(--fs-sm);
 }
 
 .flight-price {
@@ -548,6 +575,20 @@ nav a:hover, nav a.active {
     color: var(--primary-color);
 }
 
+.per-passenger {
+    color: var(--gray-dark);
+    font-size: var(--fs-sm);
+}
+
+.seats-available {
+    font-size: var(--fs-xs);
+    color: var(--accent-color);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: rgba(52, 168, 83, 0.1);
+    border-radius: var(--radius-sm);
+}
+
 .select-btn {
     background-color: var(--primary-color);
     color: var(--white);
@@ -559,6 +600,7 @@ nav a:hover, nav a.active {
     transition: all var(--transition-fast);
     width: 100%;
     max-width: 200px;
+    margin-top: var(--spacing-sm);
 }
 
 .select-btn:hover {
@@ -606,6 +648,13 @@ footer {
     color: var(--secondary-color);
 }
 
+.footer-section i {
+    margin-right: var(--spacing-sm);
+    color: var(--secondary-color);
+    width: 20px;
+    text-align: center;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-xl);
@@ -614,7 +663,194 @@ footer {
     font-size: var(--fs-sm);
 }
 
-/* RESPONSIVE DESIGN - SMARTPHONE (≤ 767px) */
+/* STATUS STYLING */
+.status-upcoming {
+    background-color: rgba(52, 168, 83, 0.1);
+    color: var(--accent-color);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.status-completed {
+    background-color: rgba(26, 115, 232, 0.1);
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.status-cancelled {
+    background-color: rgba(234, 67, 53, 0.1);
+    color: var(--danger-color);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+/* ACCOUNT PAGE STYLES */
+.account-container {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.account-avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: var(--radius-round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-3xl);
+    color: var(--white);
+}
+
+.account-info h3 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark-color);
+}
+
+.account-info p {
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.account-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.account-menu-item {
+    background: var(--bg-tertiary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.account-menu-item:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.account-menu-item i {
+    font-size: var(--fs-xl);
+    color: var(--primary-color);
+    width: 40px;
+    text-align: center;
+}
+
+.account-details {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.account-details h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-item label {
+    font-weight: 600;
+    color: var(--gray-dark);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.detail-item p {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-medium);
+    margin: 0;
+}
+
+/* FAQ STYLES */
+.faq-item {
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: var(--fs-base);
+}
+
+.faq-question i {
+    transition: transform var(--transition-fast);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.active {
+    padding: var(--spacing-md);
+    max-height: 200px;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+/* RESPONSIVE DESIGN - SMARTPHONE */
 @media (max-width: 767px) {
     .container {
         padding: 0 var(--spacing-sm);
@@ -655,6 +891,11 @@ footer {
         border-radius: var(--radius-md);
     }
     
+    .search-form-container h3 {
+        font-size: var(--fs-lg);
+        margin-bottom: var(--spacing-md);
+    }
+    
     .form-control {
         padding: var(--spacing-sm);
         font-size: var(--fs-sm);
@@ -676,6 +917,20 @@ footer {
         width: 100%;
     }
     
+    .btn i {
+        font-size: var(--fs-sm);
+    }
+    
+    .section-header h3 {
+        font-size: var(--fs-lg);
+    }
+    
+    #sortBy {
+        min-width: 100%;
+        font-size: var(--fs-sm);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
     .flight-card {
         padding: var(--spacing-md);
     }
@@ -693,9 +948,23 @@ footer {
         font-size: var(--fs-xs);
         max-width: 150px;
     }
+    
+    .account-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .detail-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .account-menu {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* RESPONSIVE DESIGN - TABLET (768px - 991px) */
+/* RESPONSIVE DESIGN - TABLET */
 @media (min-width: 768px) and (max-width: 991px) {
     header .container {
         flex-direction: row;
@@ -755,7 +1024,7 @@ footer {
     }
 }
 
-/* RESPONSIVE DESIGN - LAPTOP/DESKTOP (≥ 992px) */
+/* RESPONSIVE DESIGN - LAPTOP/DESKTOP */
 @media (min-width: 992px) {
     header .container {
         flex-direction: row;
