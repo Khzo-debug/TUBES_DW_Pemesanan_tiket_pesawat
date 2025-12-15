@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
@@ -26,17 +25,15 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Temukan Tiket Pesawat Terbaik untuk Perjalanan Anda</h2>
-                <p>Bandingkan harga dari berbagai maskapai dan pesan tiket dengan mudah</p>
+                <h2>Temukan Tiket Pesawat Terbaik</h2>
+                <p>Bandingkan harga dari berbagai maskapai dan pesan dengan mudah</p>
             </div>
         </div>
     </section>
 
-    <!-- Search Form -->
     <section class="search-section">
         <div class="container">
             <div class="search-form-container">
@@ -45,22 +42,22 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="origin"><i class="fas fa-plane-departure"></i> Kota Asal</label>
-                            <input type="text" id="origin" placeholder="Contoh: Jakarta (CGK)" required>
+                            <input type="text" id="origin" class="form-control" placeholder="Contoh: Jakarta (CGK)" required>
                         </div>
                         <div class="form-group">
                             <label for="destination"><i class="fas fa-plane-arrival"></i> Kota Tujuan</label>
-                            <input type="text" id="destination" placeholder="Contoh: Bali (DPS)" required>
+                            <input type="text" id="destination" class="form-control" placeholder="Contoh: Bali (DPS)" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="departureDate"><i class="fas fa-calendar-alt"></i> Tanggal Berangkat</label>
-                            <input type="date" id="departureDate" required>
+                            <input type="date" id="departureDate" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="returnDate"><i class="fas fa-calendar-check"></i> Tanggal Pulang (Opsional)</label>
-                            <input type="date" id="returnDate">
+                            <input type="date" id="returnDate" class="form-control">
                         </div>
                     </div>
                     
@@ -69,17 +66,16 @@
                             <label for="passengers"><i class="fas fa-users"></i> Penumpang</label>
                             <div class="passenger-selector">
                                 <button type="button" class="passenger-btn" id="decreasePassengers">-</button>
-                                <input type="number" id="passengers" value="1" min="1" max="10" readonly>
+                                <input type="number" id="passengers" class="form-control" value="1" min="1" max="10" readonly>
                                 <button type="button" class="passenger-btn" id="increasePassengers">+</button>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="class"><i class="fas fa-chair"></i> Kelas</label>
-                            <select id="class">
+                            <select id="class" class="form-control">
                                 <option value="economy">Ekonomi</option>
                                 <option value="premium_economy">Premium Ekonomi</option>
                                 <option value="business">Bisnis</option>
-                                <option value="first">First Class</option>
                             </select>
                         </div>
                     </div>
@@ -97,7 +93,6 @@
         </div>
     </section>
 
-    <!-- Results Section -->
     <section class="results-section">
         <div class="container">
             <div class="section-header">
@@ -118,36 +113,21 @@
             </div>
             
             <div class="flights-container" id="flightsContainer">
-                <!-- Flight results will be loaded here dynamically -->
                 <div class="no-results" id="noResults">
                     <i class="fas fa-plane-slash"></i>
                     <h4>Belum ada hasil pencarian</h4>
                     <p>Silakan masukkan kriteria pencarian Anda dan klik "Cari Penerbangan"</p>
                 </div>
             </div>
-            
-            <div class="api-info">
-                <h4><i class="fas fa-info-circle"></i> Informasi API</h4>
-                <p>Halaman ini menggunakan data dari <a href="https://aviationstack.com/" target="_blank">AviationStack API</a> untuk menampilkan informasi penerbangan.</p>
-                <div class="api-actions">
-                    <button type="button" class="btn-api" id="testApiBtn">
-                        <i class="fas fa-vial"></i> Test API Connection
-                    </button>
-                    <button type="button" class="btn-api" id="loadSampleBtn">
-                        <i class="fas fa-plane"></i> Load Sample Data
-                    </button>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4><i class="fas fa-plane"></i> Travel.com</h4>
-                    <p>Platform pencarian tiket pesawat terpercaya di Indonesia</p>
+                    <p>Platform pencarian tiket pesawat terpercaya</p>
                 </div>
                 <div class="footer-section">
                     <h4>Kontak</h4>
@@ -155,18 +135,17 @@
                     <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
                 </div>
                 <div class="footer-section">
-                    <h4>API</h4>
-                    <p>Ditenagai oleh AviationStack API</p>
-                    <a href="https://aviationstack.com/documentation" target="_blank">API Documentation</a>
+                    <h4>Layanan</h4>
+                    <p>24/7 Customer Support</p>
+                    <p>Pembayaran Aman</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Travel.com. Hak Cipta Dilindungi.</p>
+                <p>&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
