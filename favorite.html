@@ -5,86 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorit - Travel.com</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <div class="logo">
-                <i class="fas fa-plane"></i>
-                <h1>Travel<span>.com</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-search"></i> Cari Tiket</a></li>
-                    <li><a href="favorite.html" class="active"><i class="fas fa-heart"></i> Favorit</a></li>
-                    <li><a href="history.html"><i class="fas fa-history"></i> Riwayat</a></li>
-                    <li><a href="account.html"><i class="fas fa-user"></i> Akun</a></li>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-plane"></i> Travel<span class="text-warning">.com</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-search"></i> Cari Tiket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="favorite.html"><i class="fas fa-heart"></i> Favorit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html"><i class="fas fa-history"></i> Riwayat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account.html"><i class="fas fa-user"></i> Akun</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Penerbangan Favorit Anda</h2>
-                <p>Simpan dan akses dengan mudah penerbangan yang Anda sukai</p>
+        <div class="container text-center">
+            <h2>Penerbangan Favorit Anda</h2>
+            <p>Simpan dan akses dengan mudah penerbangan yang Anda sukai</p>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3><i class="fas fa-heart text-danger"></i> Daftar Favorit</h3>
+            <div class="sort-options">
+                <select class="form-select form-select-sm" id="sortFavorites">
+                    <option value="recent">Terbaru</option>
+                    <option value="price">Harga Terendah</option>
+                    <option value="airline">Maskapai</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="favoritesContainer">
+            <div class="alert alert-info text-center" id="noFavorites">
+                <i class="fas fa-heart fa-3x mb-3 text-muted"></i>
+                <h4>Belum ada favorit</h4>
+                <p>Tambahkan penerbangan ke favorit dengan mengklik ikon hati</p>
+                <a href="index.html" class="btn btn-primary mt-3">
+                    <i class="fas fa-search"></i> Cari Penerbangan
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="results-section">
+    <footer class="footer">
         <div class="container">
-            <div class="section-header">
-                <h3><i class="fas fa-heart"></i> Daftar Favorit</h3>
-                <div class="sort-options">
-                    <label for="sortFavorites">Urutkan:</label>
-                    <select id="sortFavorites">
-                        <option value="recent">Terbaru</option>
-                        <option value="price">Harga Terendah</option>
-                        <option value="airline">Maskapai</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="flights-container" id="favoritesContainer">
-                <div class="no-results" id="noFavorites">
-                    <i class="fas fa-heart"></i>
-                    <h4>Belum ada favorit</h4>
-                    <p>Tambahkan penerbangan ke favorit dengan mengklik ikon hati</p>
-                    <a href="index.html" class="btn btn-primary" style="margin-top: 20px;">
-                        <i class="fas fa-search"></i> Cari Penerbangan
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4><i class="fas fa-plane"></i> Travel.com</h4>
-                    <p>Platform pencarian tiket pesawat terpercaya</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <p><i class="fas fa-envelope"></i> support@travel.com</p>
-                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Layanan</h4>
-                    <p><i class="fas fa-headset"></i> 24/7 Customer Support</p>
-                    <p><i class="fas fa-shield-alt"></i> Pembayaran Aman</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
-            </div>
+            <p class="text-center mb-0">&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

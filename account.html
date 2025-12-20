@@ -5,153 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akun - Travel.com</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <div class="logo">
-                <i class="fas fa-plane"></i>
-                <h1>Travel<span>.com</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-search"></i> Cari Tiket</a></li>
-                    <li><a href="favorite.html"><i class="fas fa-heart"></i> Favorit</a></li>
-                    <li><a href="history.html"><i class="fas fa-history"></i> Riwayat</a></li>
-                    <li><a href="account.html" class="active"><i class="fas fa-user"></i> Akun</a></li>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-plane"></i> Travel<span class="text-warning">.com</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-search"></i> Cari Tiket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorite.html"><i class="fas fa-heart"></i> Favorit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html"><i class="fas fa-history"></i> Riwayat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="account.html"><i class="fas fa-user"></i> Akun</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Akun Saya</h2>
-                <p>Kelola profil dan pengaturan akun Anda</p>
-            </div>
+        <div class="container text-center">
+            <h2>Akun Saya</h2>
+            <p>Kelola profil dan pengaturan akun Anda</p>
         </div>
     </section>
 
-    <section class="results-section">
-        <div class="container">
-            <div class="account-container">
-                <div class="account-header">
-                    <div class="account-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="account-info">
-                        <h3 id="userName">Guest User</h3>
-                        <p id="userEmail">guest@example.com</p>
-                        <p><i class="fas fa-calendar-alt"></i> Bergabung: Januari 2024</p>
-                    </div>
-                </div>
-                
-                <div class="account-menu">
-                    <a href="#" class="account-menu-item" id="editProfile">
-                        <i class="fas fa-edit"></i>
-                        <div>
-                            <h4>Edit Profil</h4>
-                            <p>Ubah data pribadi Anda</p>
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-user-circle fa-5x text-primary"></i>
                         </div>
-                    </a>
-                    
-                    <a href="history.html" class="account-menu-item">
-                        <i class="fas fa-ticket-alt"></i>
-                        <div>
-                            <h4>Tiket Saya</h4>
-                            <p>Lihat semua pemesanan</p>
-                        </div>
-                    </a>
-                    
-                    <a href="favorite.html" class="account-menu-item">
-                        <i class="fas fa-heart"></i>
-                        <div>
-                            <h4>Favorit</h4>
-                            <p>Penerbangan tersimpan</p>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="account-menu-item" id="settings">
-                        <i class="fas fa-cog"></i>
-                        <div>
-                            <h4>Pengaturan</h4>
-                            <p>Ubah preferensi akun</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="account-details">
-                    <h4><i class="fas fa-info-circle"></i> Informasi Akun</h4>
-                    
-                    <div class="detail-row">
-                        <div class="detail-item">
-                            <label>Nama Lengkap</label>
-                            <p id="detailName">Guest User</p>
-                        </div>
-                        <div class="detail-item">
-                            <label>Email</label>
-                            <p id="detailEmail">guest@example.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <div class="detail-item">
-                            <label>Nomor Telepon</label>
-                            <p id="detailPhone">-</p>
-                        </div>
-                        <div class="detail-item">
-                            <label>Alamat</label>
-                            <p id="detailAddress">-</p>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <div class="detail-item">
-                            <label>Total Pemesanan</label>
-                            <p id="detailOrders">0</p>
-                        </div>
-                        <div class="detail-item">
-                            <label>Status Akun</label>
-                            <p id="detailStatus">Aktif</p>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: var(--spacing-xl); text-align: center;">
-                        <button class="btn btn-secondary" id="logoutBtn">
-                            <i class="fas fa-sign-out-alt"></i> Keluar
+                        <h4 id="userName">Guest User</h4>
+                        <p class="text-muted" id="userEmail">guest@example.com</p>
+                        <hr>
+                        <p class="account-info"><i class="fas fa-calendar-alt"></i> Bergabung: Januari 2024</p>
+                        <button class="btn btn-outline-primary btn-sm" id="editProfile">
+                            <i class="fas fa-edit"></i> Edit Profil
                         </button>
                     </div>
                 </div>
             </div>
+            
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-info-circle"></i> Informasi Akun</h4>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nama Lengkap</label>
+                                <p class="form-control-static" id="detailName">Guest User</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <p class="form-control-static" id="detailEmail">guest@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nomor Telepon</label>
+                                <p class="form-control-static" id="detailPhone">-</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Alamat</label>
+                                <p class="form-control-static" id="detailAddress">-</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Total Pemesanan</label>
+                                <p class="form-control-static" id="detailOrders">0</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Status Akun</label>
+                                <p class="form-control-static" id="detailStatus">Aktif</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button class="btn btn-danger" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i> Keluar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4><i class="fas fa-plane"></i> Travel.com</h4>
-                    <p>Platform pencarian tiket pesawat terpercaya</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <p><i class="fas fa-envelope"></i> support@travel.com</p>
-                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Layanan</h4>
-                    <p><i class="fas fa-headset"></i> 24/7 Customer Support</p>
-                    <p><i class="fas fa-shield-alt"></i> Pembayaran Aman</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
-            </div>
+            <p class="text-center mb-0">&copy; 2024 Travel.com. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
